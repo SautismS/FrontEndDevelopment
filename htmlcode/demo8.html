@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http_equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>注册</title>
+        <script>
+            //输入输出
+            //alert("大家好"); //一般用于调试最后页面中不应该出现
+            //var username = prompt("您的名字是：")
+            //document.write('hello '+username)
+        </script>
+        <style>
+            input::-webkit-input-placeholder{
+                color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        用户注册
+        <hr>
+        <form>
+            用户昵称：&nbsp;&nbsp;&nbsp;<input type="text" name="username" placeholder="请输入昵称"><br />
+            邮箱地址：&nbsp;&nbsp;&nbsp;<input type="text" name="email"><br />
+            设置密码：&nbsp;&nbsp;&nbsp;<input type="password" name="pwd"><br />
+            确认密码：&nbsp;&nbsp;&nbsp;<input type="password" name="cpwd"><br />
+            真实姓名：&nbsp;&nbsp;&nbsp;<input type="text" name="raelname"><br />
+            您的性别：&nbsp;&nbsp;&nbsp;<input type="radio" name="gender"/>男&nbsp;&nbsp;&nbsp;<input type="radio" name="gender"/>女<br />
+            上传头像：&nbsp;&nbsp;&nbsp;<input type="file" name="upload"><br />
+            单位地址：&nbsp;&nbsp;&nbsp;
+            <select name="addr">
+                <option value="1">蒙德</option>
+                <option value="2">璃月</option>
+                <option value="3" selected>枫丹</option>
+            </select><br />
+            您的爱好：&nbsp;&nbsp;&nbsp;<input type="checkbox" name="fav" checked>购物
+            &nbsp;&nbsp;<input type="checkbox" name="fav" checked>影视
+            &nbsp;&nbsp;<input type="checkbox" name="fav" checked>餐饮&nbsp;&nbsp;<br />
+            协议内容：&nbsp;&nbsp;&nbsp;<textarea name="pr"></textarea><br />
+            <input type="submit" value="确定">&nbsp;&nbsp;&nbsp;<input type="reset" />
+        </form>
+    </body>
+</html>

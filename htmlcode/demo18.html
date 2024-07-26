@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <select name="province" id="province">
+        <option value=""></option>
+        <option value="北京市">北京市</option>
+        <option value="上海市">上海市</option>
+        <option value="广东省">广东省</option>
+    </select>
+    <select name="city" id="city">
+    <option value=""></option>
+    </select>
+    <select name="area" id="area">
+    <option value=""></option>
+    </select>
+    
+    <script>
+        //json数据结构
+        //var proviceCity = {"北京市":['东城区', '西城区', '朝阳区', '海淀区', '丰台区', '门头沟区'],
+    //"上海市":['黄浦区', '卢湾区', '静安区', '徐汇区', '长宁区', '普陀区']}
+       // city = proviceCity['北京市'];
+        //alert(city[0]);
+        var province = document.getElementById('province');
+        var city = document.getElementById('city');
+        var area = document.getElementById('area');
+        province.onchange = function() {
+        city.innerHTML = '';
+        area.innerHTML = '';
+        var cityOptions = [];
+        if (province.value === '北京市') {
+        cityOptions = ['东城区', '西城区', '朝阳区', '海淀区', '丰台区', '门头沟区'];
+        } else if (province.value === '上海市') {
+        cityOptions = ['黄浦区', '卢湾区', '静安区', '徐汇区', '长宁区', '普陀区'];
+        } else if (province.value === '广东省') {
+        cityOptions = ['广州市', '深圳市', '珠海市', '汕头市', '韶关市', '佛山市'];
+        }
+        for (var i = 0; i < cityOptions.length; i++) {
+        //document.createElement(标签名)
+        var option = document.createElement('option');  //先创建标签
+        option.value = cityOptions[i];  //添加value属性
+        option.text = cityOptions[i];  //添加可见的页面文本
+        
+        city.add(option);
+        }
+        area.innerHTML = '';
+        };
+
+
+        city.onchange = function() {
+        area.innerHTML = '';
+        var areaOptions = [];
+        if (city.value === '东城区') {
+        areaOptions = ['交道口街道', '东华门街道', '景山街道', '东四街道', '东直门街道'];
+        } else if (city.value === '西城区') {
+        areaOptions = ['德胜街道', '什刹海街道', '西长安街街道', '广安门街道', '白纸坊街道'];
+        } else if (city.value === '朝阳区') {
+        areaOptions = ['三里屯街道', '麦子店街道', '亚运村街道', '大屯街道', '工体街道'];
+        }
+        for (var i = 0; i < areaOptions.length; i++) {
+        var option = document.createElement('option');
+        option.value = areaOptions[i];
+        option.text = areaOptions[i];
+        area.add(option);
+        }
+        }; 
+    </script>
+</body>
+</html>

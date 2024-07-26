@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http_equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>浮动</title>
+        <style>
+            *{margin: 0;padding: 0;}
+            /* 设置子元素浮动后，会产生父元素的高度坍塌效果，使得后续不想浮动的元素紧挨高度为0的父元素 */
+            ul,li{
+                list-style: none;
+                float: left;
+                margin: 0 auto;
+            }
+            .outer{
+                width: 600px;
+                background-color: beige;
+                margin: 0 auto;
+                /* 给父元素这个属性，隐藏溢出 */
+                overflow: hidden;
+            }
+            .inner{
+                /* 不想浮动left和right */
+                clear: both;
+                width: 600px;
+                height: 40px;
+                background-color: aquamarine;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 40px;
+            }
+            /* 使用垂直对齐属性，一般给行内元素使用，而非块级元素 */
+            img{vertical-align: middle;}
+            
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <ul>
+                <li><img src="images/yifu1.jpg"></li>
+                <li><img src="images/yifu2.jpg"></li>
+                <li><img src="images/yifu3.jpg"></li>
+                <li><img src="images/yifu4.jpg"></li>
+            </ul>
+            <div class="inner">
+                品牌活动
+            </div>
+        </div>
+    </body>
+</html>

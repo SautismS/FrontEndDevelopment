@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        img{border: none;}
+        .detail_bg{width: 700px; margin: 0 auto; }
+        .detail_title{width: 700px; height: 40px; line-height: 40px; 
+            background-color: orange; color: white; text-indent: 20px;}
+        .goods_bg{width: 700px; margin: 10px auto; overflow: hidden;}
+        .goodsshow{width: 400px;float: left;}
+        .goods_desc{width: 280px; float: right; height: 300px; background-color: aqua;}
+        .big_img{width: 400px;}
+        .big_img img{width: 400px;}
+        .small_img{width: 400px; display: flex; justify-content: space-between;}
+        .small_img img{width: 70px; border: 1px black solid;}
+        .small_img img:first-child{border: 1px red solid;}
+        .tab{clear: left; width: 700px; height: 50px; line-height: 50px; 
+            margin-top: 10px; border-bottom: 1px solid #ccc; }
+        .tab li{float: left;width: 90px; text-align: center;}
+        .tab_active{background-color: #f2f2f2; border-top: 2px solid red;}
+        .none{display: none;}
+    </style>
+
+    <script>
+        //形参要和实参不一样
+        function changePic(event){
+            var big_pic = document.getElementById('big_pic');
+            big_pic.src = event.src;  //将小图对象的源赋值给大图对象的源
+            // 先获取父元素对象
+            var small_pic = document.getElementsByClassName('small_img')[0];
+            var images = small_pic.getElementsByTagName('img');
+    
+            // 将所有小图的边框变成黑色
+            for(var i=0;i<images.length;i++){
+                var img = small_pic.getElementsByTagName('img')[i];
+                img.style.borderColor = 'black';
+            }
+            // 给当前小图的边框样式赋予红色
+            event.style.borderColor = 'red';
+        }
+
+        function changeTab(event){
+            var index = 1;
+            var tab = document.getElementsByClassName('tab')[0];
+            var tab_list = tab.getElementsByTagName('li');
+            for(var i=0;i<tab_list.length;i++){
+                tab_list[i].className = '';
+                if(event == tab_list[i]){
+                    index = i;   //明确被选中的标签的索引
+                }
+            }
+            event.className = 'tab_active';
+
+            var detailBg = document.getElementsByClassName('detail_bg')[0];
+            var tab_contents = detailBg.getElementsByTagName('article');  //获取标签内容对象
+            for(var i=0;i<tab_contents.length;i++){
+                if(index != i){
+                    tab_contents[i].className = 'goods'+i+" none";
+                }else{
+                    tab_contents[i].className = 'goods'+i;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="detail_bg">
+        <div class="detail_title">商品详情</div>
+        <section class="goods_bg">
+            <div class="goodsshow">
+                <div class="big_img"><img src="images/showdetail/dd1.jpg" id="big_pic" alt=""></div>
+                <div class="small_img">
+                    <!-- this代表当前元素对象，它包含了该元素对象的属性 -->
+                    <img src="images/showdetail/dd1.jpg" onclick="changePic(this);" alt="">
+                    <img src="images/showdetail/dd2.jpg" onclick="changePic(this);" alt="">
+                    <img src="images/showdetail/dd3.jpg" onclick="changePic(this);" alt="">
+                    <img src="images/showdetail/dd4.jpg" onclick="changePic(this);" alt="">
+                    <img src="images/showdetail/dd5.jpg" onclick="changePic(this);" alt="">
+                </div>
+            </div>
+            <div class="goods_desc"></div>
+        </section>
+        <ul class="tab">
+            <li class="tab_active" onclick="changeTab(this);">商品详情</li>
+            <li onclick="changeTab(this);">商品评价</li>
+            <li onclick="changeTab(this);">成交记录</li>
+        </ul>
+        <article class="goods1">
+            <img src="images/showdetail/detail1.jpg"  alt="">
+        </article>
+        <article class="goods2 none" >
+            <img src="images/showdetail/detail2.jpg"  alt="">
+        </article>
+        <article class="goods3 none">
+            <img src="images/showdetail/detail3.jpg"  alt="">
+        </article>
+    </div>
+</body>
+</html>

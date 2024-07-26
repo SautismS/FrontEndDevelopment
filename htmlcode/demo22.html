@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        .pic_bg{width: 690px; margin: 0 auto;}
+        .focusBox{position: absolute; width: 120px; top:310px; left:50%; margin-left: -60px; height: 30px; }
+        .focusBox li{float: left;margin-right: 10px; width: 15px; height: 15px; 
+            border-radius: 10px; background-color: gray; cursor:pointer}
+        li.cur{background-color:orange}
+    </style>
+</head>
+<body>
+    <!-- 先完成图片切换，再完成点的切换 -->
+    <div class="pic_bg">
+        <img src="images/index/pic1.jpg" id="pic">
+        <ul class="focusBox">
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var index = 2;
+        function changePic(){
+            if(index == 4){   // 如果找到第四张图片则返回第一张
+                index = 1;
+            }
+            var addr = "images/index/pic"+ index +".jpg";  //拼src的值
+            var picEle = document.getElementById('pic');  
+            picEle.src = addr;  //给图片赋予新的src值 
+
+            // 获取ul下的所有的li元素
+            var liList = document.getElementsByClassName('focusBox')[0].getElementsByTagName('li');
+
+            // 将所有现存的li样式去掉
+            for(var i=0;i<liList.length; i++){
+                liList[i].className = '';
+            }
+            liList[index-1].className = 'cur';
+            index++;  
+        }
+
+        window.setInterval(changePic, 1000);
+
+    </script>
+</body>
+</html>
