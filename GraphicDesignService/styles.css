@@ -1,0 +1,384 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+.navbar a {
+    color: #494949;
+    font-size: 1.5em;
+    font-family: YouYuan;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+}
+
+.navbar a:hover {
+    background-color: #f4f4f4;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+button {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #1a9df4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a6de4;
+}
+
+.top-section {
+    margin: 4em 0;
+    text-align: center;
+}
+
+.gradient-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, #1ae9f4, #3a6de4, #580dd0);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 5s infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.middle-section {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+.middle-section button {
+    width: 8em;
+    height: 4em;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #833cf5;
+    border-radius: 30px;
+    margin-left: 2em;
+    margin-right: 2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.middle-section button:hover {
+    transform: scale(1.25);
+    background-color: #580dd0;
+}
+
+.bottom-section {
+    display: flex;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.poster-carousel-section {
+    display: flex;
+    flex-direction: column; /* 垂直排列标题和轮播图 */
+    align-items: center;
+    flex-basis: 75%; /* 左边占 3/4 */
+    box-sizing: border-box;
+}
+
+.color-recommendation-section {
+    display: flex;
+    flex-direction: column; /* 垂直排列标题和配色表 */
+    align-items: center;
+    flex-basis: 25%; /* 右边占 1/4 */
+    padding-left: 2em;
+    padding-right: 2em;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; /* 确保占满父容器 */
+    margin: 0 auto;
+}
+
+.carousel img {
+    width: 30%;
+    margin: 0 1%;
+}
+
+.color-table {
+    border-collapse: separate; /* 使用 separate 而不是 collapse */
+    border-spacing: 0 20px; /* 水平和垂直间距分别为 0 和 10px */
+    width: 100%; /* 确保表格占满父容器 */
+}
+
+.color-table td {
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.color-table td:hover {
+    border: 1px solid #000;
+}
+
+.color-table td:hover {
+    border: 1px solid #000;
+}
+
+.subtop-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em; /* 设置间距 */
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* 固定宽度 */
+}
+
+.link-item img {
+    width: 100px; /* 固定宽度 */
+    height: 100px; /* 固定高度 */
+    object-fit: cover;
+    margin-bottom: 0.5em; /* 图片与文字的间距 */
+    border-radius: 10px;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.link-item a:hover {
+    text-decoration: underline;
+    color: #3a6de4;
+}
+
+.container {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.inspiration-section, .resource-section {
+    width: 40%;
+}
+
+input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #f4f4f4;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+li button {
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 900;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.todo-list {
+    flex: 1;
+    padding: 1em;
+    box-sizing: border-box;
+    max-width: 25%;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    flex: 1;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    box-sizing: border-box;
+}
+
+.input-container button {
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    margin-bottom: 0.8em;
+    text-align: center;
+    line-height: 0;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #f4f4f4;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+#todo-list li button {
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 900;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.free-creation-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.canvas-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.canvas-toolbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.canvas-toolbar button {
+    width: 5em;
+    height: 2.5em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.canvas-area {
+    flex: 1;
+    position: relative;
+}
+
+#drawing-canvas {
+    width: 100%;
+    height: 80%;
+    border: 1px solid #ccc;
+}

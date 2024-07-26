@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自由创作</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <a href="inspiration.html">灵感采集</a>
+        <a href="resources.html">资源获取</a>
+        <a href="creation.html">自由创作</a>
+    </div>
+
+    <div class="free-creation-section">
+        <div class="todo-list">
+            <h2>创意点子</h2>
+            <div class="input-container">
+                <input type="text" id="todo-input">
+                <button onclick="addTodo()">+</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+        <div class="canvas-container">
+            <h2>绘出所想</h2>
+            <div class="canvas-toolbar">
+                <button onclick="exportAsImage()">导出</button>
+                <button onclick="undo()">撤销</button>
+                <button onclick="redo()">重做</button>
+                <button onclick="clearCanvas()">清空</button>
+                <input type="color" id="brush-color" onchange="changeBrushColor()">
+                <input type="range" id="brush-size" min="1" max="20" onchange="changeBrushSize()">
+            </div>
+            <canvas id="drawing-canvas"></canvas>
+        </div>
+    </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>

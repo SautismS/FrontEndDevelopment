@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵感采集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <a href="inspiration.html">灵感采集</a>
+        <a href="resources.html">资源获取</a>
+        <a href="creation.html">自由创作</a>
+    </div>
+
+    <div class="subtop-section">
+        <div class="link-item">
+            <a href="https://www.zcool.com.cn/" target="_blank">
+                <img src="images/inspiration/pic1.png" alt="pic1">
+                <p>站酷ZCOOL</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://huaban.com/?keep=true" target="_blank">
+                <img src="images/inspiration/pic2.png" alt="pic2">
+                <p>花瓣网</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.pinterest.com/" target="_blank">
+                <img src="images/inspiration/pic3.jpg" alt="pic3">
+                <p>Pinterest</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.behance.net/" target="_blank">
+                <img src="images/inspiration/pic4.png" alt="pic4">
+                <p>Behance</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="inspiration-section">
+            <h2>灵感收藏夹</h2>
+            <input type="text" id="inspiration-url" placeholder="添加网址...">
+            <button onclick="addInspiration()">添加</button>
+            <ul id="inspiration-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

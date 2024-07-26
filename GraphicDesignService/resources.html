@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵感采集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <a href="inspiration.html">灵感采集</a>
+        <a href="resources.html">资源获取</a>
+        <a href="creation.html">自由创作</a>
+    </div>
+
+    <div class="subtop-section">
+        <div class="link-item">
+            <a href="https://pixabay.com/zh/" target="_blank">
+                <img src="images/resources/pic1.png" alt="pic1">
+                <p>Pixabay</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.pexels.com/zh-cn/" target="_blank">
+                <img src="images/resources/pic2.png" alt="pic2">
+                <p>Pexels</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.iconfont.cn/" target="_blank">
+                <img src="images/resources/pic3.png" alt="pic3">
+                <p>iconfont</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.freepik.com/" target="_blank">
+                <img src="images/resources/pic4.jpg" alt="pic4">
+                <p>Freepik</p>
+            </a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="resource-section">
+            <h2>资源收藏夹</h2>
+            <input type="file" id="resource-file">
+            <button onclick="addResource()">添加</button>
+            <ul id="resource-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

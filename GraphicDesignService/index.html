@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面设计服务</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <a href="inspiration.html">灵感采集</a>
+        <a href="resources.html">资源获取</a>
+        <a href="creation.html">自由创作</a>
+    </div>
+
+    <div>
+        <div class="top-section">
+            <h1 class="gradient-text">点击开启你的创意设计~</h1>
+        </div>
+        
+        <div class="middle-section">
+            <button onclick="window.location.href='inspiration.html'">灵感采集</button>
+            <button onclick="window.location.href='resources.html'">资源获取</button>
+            <button onclick="window.location.href='creation.html'">自由创作</button>
+        </div>
+
+        <div class="bottom-section">
+            <div class="poster-carousel-section">
+                <h3 class="section-title">海报鉴赏</h3>
+                <div class="carousel">
+                    <img id="pic1" src="images/index/pic1.jpg" alt="Poster 1">
+                    <img id="pic2" src="images/index/pic2.jpg" alt="Poster 2">
+                    <img id="pic3" src="images/index/pic3.jpg" alt="Poster 3">
+                </div>
+            </div>
+            <div class="color-recommendation-section">
+                <h3 class="section-title">配色推荐</h3>
+                <table class="color-table">
+                    <tr>
+                        <td style="background-color: #72A603;" onclick="copyColor('#72A603')"></td>
+                        <td style="background-color: #E5F2B6;" onclick="copyColor('#E5F2B6')"></td>
+                        <td style="background-color: #EAF207;" onclick="copyColor('#EAF207')"></td>
+                        <td style="background-color: #D6D979;" onclick="copyColor('#D6D979')"></td>
+                        <td style="background-color: #F2EDD0;" onclick="copyColor('#F2EDD0')"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #AED3F2;" onclick="copyColor('#AED3F2')"></td>
+                        <td style="background-color: #0477BF;" onclick="copyColor('#0477BF')"></td>
+                        <td style="background-color: #048ABF;" onclick="copyColor('#048ABF')"></td>
+                        <td style="background-color: #3C92A6;" onclick="copyColor('#3C92A6')"></td>
+                        <td style="background-color: #BFB19F;" onclick="copyColor('#BFB19F')"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F2CB05;" onclick="copyColor('#F2CB05')"></td>
+                        <td style="background-color: #F2B705;" onclick="copyColor('#F2B705')"></td>
+                        <td style="background-color: #F28705;" onclick="copyColor('#F28705')"></td>
+                        <td style="background-color: #D95204;" onclick="copyColor('#D95204')"></td>
+                        <td style="background-color: #8C4227;" onclick="copyColor('#8C4227')"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #32628C;" onclick="copyColor('#32628C')"></td>
+                        <td style="background-color: #5888A6;" onclick="copyColor('#5888A6')"></td>
+                        <td style="background-color: #ADC8D9;" onclick="copyColor('#ADC8D9')"></td>
+                        <td style="background-color: #EBF0F2;" onclick="copyColor('#EBF0F2')"></td>
+                        <td style="background-color: #403115;" onclick="copyColor('#403115')"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #717348;" onclick="copyColor('#717348')"></td>
+                        <td style="background-color: #594736;" onclick="copyColor('#594736')"></td>
+                        <td style="background-color: #8C837B;" onclick="copyColor('#8C837B')"></td>
+                        <td style="background-color: #BFB6AE;" onclick="copyColor('#BFB6AE')"></td>
+                        <td style="background-color: #F2F2F2;" onclick="copyColor('#F2F2F2')"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F26398;" onclick="copyColor('#F26398')"></td>
+                        <td style="background-color: #F20574;" onclick="copyColor('#F20574')"></td>
+                        <td style="background-color: #0378A6;" onclick="copyColor('#0378A6')"></td>
+                        <td style="background-color: #04BFBF;" onclick="copyColor('#04BFBF')"></td>
+                        <td style="background-color: #04BF9D;" onclick="copyColor('#04BF9D')"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
